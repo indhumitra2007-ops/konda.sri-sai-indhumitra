@@ -1,14 +1,136 @@
-Run locally
-Open index.html in your browser. That's it.
-Deploy with GitHub Pages
-Create a new public repository, for example portfolio (or YOUR-USERNAME.github.io for a root URL).
-Upload all files and the assets folder to the repository root.
-Go to Settings > Pages. Under Build and deployment, choose Deploy from a branch, select main and / (root), then Save.
-After a minute, your site is live at https://YOUR-USERNAME.github.io/portfolio/.
-Customize
-Search each file for EDIT or [YOUR and replace with your details:
-Name, college, university: index.html
-Resume: save as assets/resume.pdf
-GitHub, LinkedIn, email: hero and Contact section
-Certificates: copy a <article class="card"> block and edit it
-Colors: variables at the top of style.css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: your name in the title -->
+  <title>Konda Sri Sai Indhumitra | Cybersecurity Student</title>
+  <meta name="description" content="Portfolio of a B.Tech CSE (Cybersecurity) student.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- 1. NAVIGATION -->
+<header class="nav">
+  <a class="brand" href="#home">Konda Sri Sai Indhumitra</a><!-- EDIT: name -->
+  <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links">Menu</button>
+  <nav id="links" class="links">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- 2. HERO -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="hello">Hi, I'm Konda Sri Sai Indhumitra</p><!-- EDIT: name -->
+    <h1>B.Tech CSE – Cybersecurity Student</h1>
+    <p class="lead">Exploring cybersecurity, ethical hacking, networking and emerging technologies while building practical skills through projects and continuous learning.</p>
+    <div class="btns">
+      <!-- EDIT: put your resume PDF in assets/ and keep this file name (or change it) -->
+      <a class="btn primary" href="assets/resume.pdf" download>Download Resume</a>
+      <a class="btn" href="#contact">Contact Me</a>
+    </div>
+    <div class="social">
+      <!-- EDIT: GitHub and LinkedIn URLs -->
+      <a href="https://github.com/indhumitra2007-ops" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/indhu-konda-b5ba4936a" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3zM9.75 9.75h3.83v1.54h.05c.53-1 1.84-2.08 3.79-2.08 4.05 0 4.8 2.66 4.8 6.13V21h-4v-4.85c0-1.16-.02-2.65-1.62-2.65-1.62 0-1.87 1.26-1.87 2.57V21h-4z"/></svg>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<!-- 3. ABOUT -->
+<section id="about" class="section">
+  <h2>About me</h2>
+  <div class="about-grid">
+    <p>I am a B.Tech Computer Science Engineering student specializing in Cybersecurity. I am currently building my knowledge and practical skills in cybersecurity, ethical hacking, networking, and computer science.</p>
+    <p>I am interested in learning new technologies, working on practical projects, and developing myself for a career in cybersecurity.</p>
+  </div>
+</section>
+
+<!-- 4. EDUCATION -->
+<section id="education" class="section">
+  <h2>Education</h2>
+  <div class="timeline">
+    <article class="card">
+      <h3>B.Tech – Computer Science Engineering (Cybersecurity)</h3>
+      <p>Swami Vivekanand Institute of Technology</p><!-- EDIT -->
+      <p class="meta">Expected graduation: 2028</p>
+    </article>
+  </div>
+</section>
+
+<!-- 5. SKILLS. EDIT: add or remove <li> items -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>Cybersecurity Fundamentals</li>
+    <li>Ethical Hacking Fundamentals</li>
+    <li>Networking Fundamentals</li>
+    <li>Linux Basics</li>
+    <li>Python Basics</li>
+    <li>HTML &amp; CSS</li>
+    <li>Git &amp; GitHub</li>
+    <li>Computer Networks</li>
+    <li>Operating Systems</li>
+    <li>Data Structures</li>
+    <li>Web Security Fundamentals</li>
+    <li>Reconnaissance &amp; Enumeration</li>
+  </ul>
+</section>
+
+<!-- 6. CERTIFICATES
+     To add one: copy a whole <article class="card"> block and paste it below the last one. -->
+<section id="certificates" class="section">
+  <h2>Certificates</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>Add Your Certificate Here</h3>
+      <p>Issuing organization: <span class="muted">Add organization</span></p>
+      <p class="meta">Date: Add date</p>
+      <a class="btn small" href="#" target="_blank" rel="noopener">View Certificate</a><!-- EDIT: link -->
+    </article>
+    <article class="card">
+      <h3>Add Your Certificate Here</h3>
+      <p>Issuing organization: <span class="muted">Add organization</span></p>
+      <p class="meta">Date: Add date</p>
+      <a class="btn small" href="#" target="_blank" rel="noopener">View Certificate</a>
+    </article>
+  </div>
+</section>
+
+<!-- 8. CONTACT. EDIT: email, LinkedIn, GitHub -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <ul class="contact">
+    <li>Email: <a href="mailto:indhukonda2007@gmail.com">indhukonda2007@gmail.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/indhu-konda-b5ba4936a" target="_blank" rel="noopener">linkedin.com/in/indhu-konda-b5ba4936a</a></li>
+    <li>GitHub: <a href="https://github.com/indhumitra2007-ops" target="_blank" rel="noopener">github.com/indhumitra2007-ops</a></li>
+    <li>Location: Hyderabad, India</li>
+  </ul>
+</section>
+
+</main>
+
+<!-- 9. FOOTER -->
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Konda Sri Sai Indhumitra. Built with HTML, CSS and JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
