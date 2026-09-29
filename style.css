@@ -1,101 +1,84 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+/* Colors: change these variables to re-theme the whole site */
+:root{
+  --bg:#0d1320; --panel:#151d2e; --line:#26324a;
+  --text:#e6ecf7; --muted:#9aa8c2; --accent:#6fd3ff; --accent-ink:#06202e;
+  --radius:10px;
 }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 "Manrope",system-ui,sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--accent-ink);padding:.5rem 1rem;z-index:20}
+.skip:focus{left:0}
 
-body {
-    font-family: Arial, sans-serif;
-    background: #0a0f1c;
-    color: #e6edf3;
-    line-height: 1.6;
+/* Navigation */
+.nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;
+  padding:.8rem 1.5rem;background:rgba(13,19,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;color:var(--text);text-decoration:none}
+.links{display:flex;gap:1.4rem}
+.links a{color:var(--muted);text-decoration:none;font-weight:500}
+.links a:hover{color:var(--text)}
+.menu-btn{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:.4rem .8rem;font:inherit}
+
+/* Layout */
+.hero,.section,.footer{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+.section{padding-top:4.5rem;padding-bottom:1rem}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:.3rem 0 1rem;letter-spacing:-.02em}
+h2{font-size:1.7rem;margin:0 0 1.4rem;letter-spacing:-.01em;border-left:3px solid var(--accent);padding-left:.8rem}
+h3{margin:0 0 .4rem;font-size:1.08rem}
+
+/* Hero: the terminal-style prompt is the one memorable touch */
+.hero{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center;min-height:calc(100vh - 60px);padding-top:3rem;padding-bottom:3rem}
+.hello{font:500 1rem "JetBrains Mono",monospace;color:var(--accent);margin:0}
+.hello::before{content:"$ whoami  ";color:var(--muted)}
+.hello::after{content:"";display:inline-block;width:.6ch;height:1.1em;background:var(--accent);margin-left:.3ch;vertical-align:text-bottom;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--muted);max-width:56ch}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.6rem 0}
+.social{display:flex;gap:1rem}
+.social a{color:var(--muted);display:inline-flex}
+.social a:hover{color:var(--accent)}
+.photo{width:min(280px,70vw);aspect-ratio:1;border-radius:50%;object-fit:cover;justify-self:center;border:3px solid var(--line)}
+.placeholder{display:grid;place-items:center;text-align:center;background:var(--panel);color:var(--muted);border-style:dashed}
+
+/* Buttons */
+.btn{display:inline-block;padding:.65rem 1.2rem;border:1px solid var(--line);border-radius:var(--radius);color:var(--text);text-decoration:none;font-weight:700;transition:border-color .2s,background .2s}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{background:#94deff}
+.btn.small{padding:.4rem .9rem;font-size:.9rem}
+
+/* Content */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;color:var(--muted)}
+.about-grid p{margin:0}
+.timeline{border-left:2px solid var(--line);padding-left:1.4rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem}
+.card p{margin:.3rem 0;color:var(--muted)}
+.card .btn{margin-top:.6rem}
+.muted,.meta{color:var(--muted)}
+.meta{font-size:.9rem}
+.skills{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.8rem}
+.skills li{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:.7rem 1rem;font-weight:500}
+.skills li:hover{border-color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tags span{font:400 .8rem "JetBrains Mono",monospace;border:1px solid var(--line);border-radius:6px;padding:.15rem .5rem}
+.row{display:flex;gap:.6rem}
+.contact{list-style:none;padding:0;margin:0;display:grid;gap:.6rem}
+.footer{padding-top:3rem;padding-bottom:2rem;color:var(--muted);text-align:center;font-size:.9rem}
+
+/* Mobile and tablet */
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .photo{order:-1;justify-self:start;width:170px}
+  .about-grid{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:.9rem 1.5rem;border-top:1px solid var(--line)}
 }
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hello::after{animation:none}}
+    
 
-header {
-    position: sticky;
-    top: 0;
-    background: #0a0f1c;
-    border-bottom: 1px solid #1f2937;
-    z-index: 1000;
-}
 
-nav {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h2 {
-    color: #00ff9d;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: #e6edf3;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    color: #00ff9d;
-}
-
-main {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.hero {
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-.small-title {
-    color: #00ff9d;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-.hero h1 {
-    font-size: 60px;
-    margin: 10px 0;
-}
-
-.hero h2 {
-    color: #9ca3af;
-    font-weight: normal;
-}
-
-.hero p {
-    max-width: 650px;
-    margin-top: 20px;
-    color: #b7c0cc;
-}
-
-.buttons {
-    margin-top: 30px;
-}
-
-.buttons a {
-    display: inline-block;
-    padding: 12px 22px;
-    margin-right: 10px;
-    border: 1px solid #00ff9d;
-    color: #00ff9d;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.buttons a:hover {
-    background: #00ff9d;
-    color: #0a0f1
