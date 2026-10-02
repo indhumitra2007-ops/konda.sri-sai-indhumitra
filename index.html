@@ -3,112 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- EDIT: your name in the title -->
   <title>Konda Sri Sai Indhumitra | Cybersecurity Student</title>
-  <meta name="description" content="Portfolio of a B.Tech CSE (Cybersecurity) student.">
+  <meta name="description" content="Portfolio of Konda Sri Sai Indhumitra, B.Tech CSE (Cybersecurity) student.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div id="boot"><pre id="bootlog"></pre><p class="tiny">click to skip</p></div>
+<div id="glow"></div>
+<div id="progress"></div>
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- 1. NAVIGATION -->
 <header class="nav">
-  <a class="brand" href="#home">Konda Sri Sai Indhumitra</a><!-- EDIT: name -->
+  <a class="brand" href="#home">&gt;_ indhumitra</a>
   <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links">Menu</button>
   <nav id="links" class="links">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a><a href="#terminal">Terminal</a><a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main id="main">
 
-<!-- 2. HERO -->
+<!-- HERO: decrypting name + a 3D HUD whose layers float at different depths -->
 <section id="home" class="hero">
-  <div class="hero-text">
-    <p class="hello">Hi, I'm Konda Sri Sai Indhumitra</p><!-- EDIT: name -->
-    <h1>B.Tech CSE – Cybersecurity Student</h1>
+  <div class="floor" aria-hidden="true"></div>
+  <div>
+    <p class="eyebrow">&gt; session started: guest</p>
+    <h1 id="name" class="glitch" data-text="Konda Sri Sai Indhumitra" aria-label="Konda Sri Sai Indhumitra">Konda Sri Sai Indhumitra</h1>
+    <p class="role">B.Tech CSE – Cybersecurity Student</p>
     <p class="lead">Exploring cybersecurity, ethical hacking, networking and emerging technologies while building practical skills through projects and continuous learning.</p>
     <div class="btns">
-      <!-- EDIT: put your resume PDF in assets/ and keep this file name (or change it) -->
-       <a class="btn" href="#contact">Contact Me</a>
+      <a class="btn primary" href="#certificates">View Certificates</a>
+      <a class="btn" href="#contact">Contact Me</a>
     </div>
-    <div class="social">
-      <!-- EDIT: GitHub and LinkedIn URLs -->
-      <a href="https://github.com/indhumitra2007-ops" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/indhu-konda-b5ba4936a" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3zM9.75 9.75h3.83v1.54h.05c.53-1 1.84-2.08 3.79-2.08 4.05 0 4.8 2.66 4.8 6.13V21h-4v-4.85c0-1.16-.02-2.65-1.62-2.65-1.62 0-1.87 1.26-1.87 2.57V21h-4z"/></svg>
-      </a>
+    <div class="social"><a href="https://github.com/indhumitra2007-ops" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 16 16" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+      <a href="https://www.linkedin.com/in/indhu-konda-b5ba4936a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.75h4V21H3zM9.75 9.75h3.83v1.54h.05c.53-1 1.84-2.08 3.79-2.08 4.05 0 4.8 2.66 4.8 6.13V21h-4v-4.85c0-1.16-.02-2.65-1.62-2.65-1.62 0-1.87 1.26-1.87 2.57V21h-4z"/></svg></a>
     </div>
   </div>
-
+  <div class="hud" aria-hidden="true">
+    <div class="stage" id="stage">
+      <div class="radar"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+      <div class="panel p1"><p class="mono tiny">SYSTEM STATUS</p><p>user: indhumitra</p><p>focus: cybersecurity</p><p>mode: <b>learning</b></p></div>
+      <div class="panel p2"><p class="mono tiny">TERMINAL</p><p>$ whoami</p><p>b.tech cse (cybersecurity)</p><p>$ <span class="caret"></span></p></div>
+    </div>
+  </div>
 </section>
 
-<!-- 3. ABOUT -->
 <section id="about" class="section">
-  <h2>About me</h2>
+  <h2>// About me</h2>
+  <p class="hint">Some words are redacted. Hover or tap the black bars.</p>
   <div class="about-grid">
-    <p>I am a B.Tech Computer Science Engineering student specializing in Cybersecurity. I am currently building my knowledge and practical skills in cybersecurity, ethical hacking, networking, and computer science.</p>
+    <p>I am a B.Tech Computer Science Engineering student specializing in <span class="redact" tabindex="0">Cybersecurity</span>. I am currently building my knowledge and practical skills in cybersecurity, <span class="redact" tabindex="0">ethical hacking</span>, <span class="redact" tabindex="0">networking</span>, and computer science.</p>
     <p>I am interested in learning new technologies, working on practical projects, and developing myself for a career in cybersecurity.</p>
   </div>
 </section>
 
-<!-- 4. EDUCATION -->
 <section id="education" class="section">
-  <h2>Education</h2>
+  <h2>// Education</h2>
   <div class="timeline">
     <article class="card">
       <h3>B.Tech – Computer Science Engineering (Cybersecurity)</h3>
-      <p>Swami Vivekanand Institute of Technology</p><!-- EDIT -->
+      <p>Swami Vivekanand Institute of Technology</p>
       <p class="meta">Expected graduation: 2028</p>
     </article>
   </div>
 </section>
 
-<!-- 5. SKILLS. EDIT: add or remove <li> items -->
+<!-- SKILLS: each tile flips in 3D. To add one, copy a whole <li> -->
 <section id="skills" class="section">
-  <h2>Skills</h2>
+  <h2>// Skills</h2>
   <ul class="skills">
-    <li>Cybersecurity Fundamentals</li>
-    <li>Ethical Hacking Fundamentals</li>
-    <li>Python Basics</li>
-    <li>HTML &amp; CSS</li>
-    <li>Git &amp; GitHub</li>
-    <li>Web Security Fundamentals</li>
-    </ul>
+    <li class="flip"><div class="in"><span class="fr">Cybersecurity Fundamentals</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">Ethical Hacking Fundamentals</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">Networking Fundamentals</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">Python Basics</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">HTML &amp; CSS</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">Git &amp; GitHub</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">Computer Networks</span><span class="bk">Learning</span></div></li>
+    <li class="flip"><div class="in"><span class="fr">Web Security Fundamentals</span><span class="bk">Learning</span></div></li>
+   </ul>
 </section>
 
-<!-- 6. CERTIFICATES
-     To add one: copy a whole <article class="card"> block and paste it below the last one. -->
+<!-- CERTIFICATES: hover (laptop) or tap (phone) to flip. The href must match the PDF name in your repo exactly. -->
 <section id="certificates" class="section">
-  <h2>Certificates</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>Hackathon2025.pdf</h3>
-      <p>Issuing organization: <span class="muted">svit</span></p>
-      <p class="meta">year:2025</p>
-      <a class="btn small" href="#" target="_blank" rel="noopener">View Certificate</a><!-- EDIT: link -->
+  <h2>// Certificates</h2>
+  <div class="certs">
+    <article class="cert" tabindex="0">
+      <div class="in">
+        <div class="fr"><p class="mono tiny">CERTIFICATE · 2025</p><h3>Hackathon 2025</h3><p class="muted">Issued by SVIT</p><p class="tiny muted">Hover or tap to flip</p></div>
+        <div class="bk"><p>Certificate of Participation</p><a class="btn primary small" href="Hacthokon2025.pdf" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
     </article>
-    <article class="card">
-      <h3>Jnthu-workshop.pdf</h3>
-      <p>Issuing organization: <span class="muted">centre of excellence in cyber security</span></p>
-      <p class="meta">year:2024</p>
-      <a class="btn small" href="#" target="_blank" rel="noopener">View Certificate</a>
+    <article class="cert" tabindex="0">
+      <div class="in">
+        <div class="fr"><p class="mono tiny">CERTIFICATE · 2024</p><h3>JNTHU-Workshop</h3><p class="muted">jnthu</p><p class="tiny muted">Hover or tap to flip</p></div>
+        <div class="bk"><p>Workshop certificate</p><a class="btn primary small" href="Jnthu-workshop.pdf" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
     </article>
   </div>
 </section>
 
-<!-- 8. CONTACT. EDIT: email, LinkedIn, GitHub -->
+<section id="terminal" class="section">
+  <h2>// Try my terminal</h2>
+  <div class="term" onclick="document.getElementById('cmd').focus()">
+    <div class="bar"><i></i><i></i><i></i><span>guest@portfolio:~</span></div>
+    <div id="out">Type <b>help</b> and press Enter.</div>
+    <label class="prompt">$ <input id="cmd" type="text" autocomplete="off" spellcheck="false" aria-label="Terminal command"></label>
+  </div>
+</section>
+
 <section id="contact" class="section">
-  <h2>Contact</h2>
+  <h2>// Contact</h2>
   <ul class="contact">
     <li>Email: <a href="mailto:indhukonda2007@gmail.com">indhukonda2007@gmail.com</a></li>
     <li>LinkedIn: <a href="https://www.linkedin.com/in/indhu-konda-b5ba4936a" target="_blank" rel="noopener">linkedin.com/in/indhu-konda-b5ba4936a</a></li>
@@ -116,14 +123,11 @@
     <li>Location: Hyderabad, India</li>
   </ul>
 </section>
-
 </main>
 
-<!-- 9. FOOTER -->
-<footer class="footer">
-  <p>&copy; <span id="year"></span> Konda Sri Sai Indhumitra. Built with HTML, CSS and JavaScript.</p>
-</footer>
-
+<div class="tape" aria-hidden="true"></div>
+<footer class="footer"><p>&copy; <span id="year"></span> Konda Sri Sai Indhumitra</p></footer>
 <script src="script.js"></script>
 </body>
-</html>
+</html> 
+ 
